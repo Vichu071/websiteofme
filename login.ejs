@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <style>
+       
+        body {
+            background-image: url('https://i.pinimg.com/originals/05/ec/ea/05eceac4ccd288e2c5a36e5c5a744e93.png');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .card {
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+
+        .card-title {
+            color: #55008a;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .form-label {
+            color: #55008a;
+            font-weight: bold;
+        }
+
+        .btn-primary {
+            background-color: #55008a;
+            border-color: #55008a;
+        }
+
+        .btn-primary:hover {
+            background-color: #44006b;
+            border-color: #44006b;
+        }
+
+        .btn-primary:focus {
+            box-shadow: 0 0 0 0.25rem rgba(85, 0, 138, 0.5);
+        }
+
+        .btn-primary:active {
+            background-color: #55008a;
+            border-color: #55008a;
+            box-shadow: none;
+        }
+
+        .btn-ok {
+            background-color: #55008a;
+            border-color: #55008a;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .btn-ok:hover {
+            background-color: #44006b;
+            border-color: #44006b;
+        }
+
+        .btn-cancel {
+            background-color: #55008a;
+            border-color: #55008a;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .btn-cancel:hover {
+            background-color: #44006b;
+            border-color: #44006b;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6 col-lg-4">
+                <div class="card shadow-lg rounded-lg">
+                    <div class="card-body p-4">
+                        <h2 class="card-title text-center mb-4">Welcome to Vichuz Website</h2>
+                        <% if (message.length > 0) { %>
+                            <div class="alert alert-danger text-center mb-3">
+                                <%= message %>
+                            </div>
+                        <% } %>
+                        <form action="/login" method="POST">
+                            <div class="mb-3">
+                                <label for="formEmail" class="form-label">Email address</label>
+                                <input type="email" name="email" id="formEmail" class="form-control" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="formPassword" class="form-label">Password</label>
+                                <input type="password" name="password" id="formPassword" class="form-control" required>
+                            </div>
+                            <div class="d-grid gap-2">
+                                <button type="submit" class="btn btn-primary">Sign In</button>
+                            </div>
+                        </form>
+                        <div class="text-center mt-3">
+                            <a href="/register">Don't have an account yet? Register</a>
+                        </div>
+                        <div class="text-center mt-3">
+                            <a href="/forgot-password">Forgot password?</a>
+                        </div>
+                    </div>
+                </div>
+            
+
